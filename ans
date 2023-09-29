@@ -1,0 +1,78 @@
+
+
+**Question 1: Stutter a Word**
+```python
+def stutter(word):
+    if len(word) >= 2:
+        stuttered = word[:2] + "... " + word[:2] + "... " + word + "?"
+        return stuttered
+    else:
+        return "Word must be at least two characters long."
+
+# Examples
+print(stutter("incredible"))  # ➞ "in... in... incredible?"
+print(stutter("enthusiastic"))  # ➞ "en... en... enthusiastic?"
+print(stutter("outstanding"))  # ➞ "ou... ou... outstanding?"
+```
+
+**Question 2: Convert Radians to Degrees**
+```python
+import math
+
+def radians_to_degrees(radians):
+    degrees = radians * (180 / math.pi)
+    return round(degrees, 1)
+
+# Examples
+print(radians_to_degrees(1))  # ➞ 57.3
+print(radians_to_degrees(20))  # ➞ 1145.9
+print(radians_to_degrees(50))  # ➞ 2864.8
+```
+
+**Question 3: Check if a Number is Curzon**
+```python
+def is_curzon(num):
+    numerator = 2 ** num + 1
+    denominator = 2 * num + 1
+    if numerator % denominator == 0:
+        return True
+    else:
+        return False
+
+# Examples
+print(is_curzon(5))  # ➞ True
+print(is_curzon(10))  # ➞ False
+print(is_curzon(14))  # ➞ True
+```
+
+**Question 4: Calculate the Area of a Hexagon**
+```python
+def area_of_hexagon(x):
+    if x <= 0:
+        return "Side length must be a positive number."
+    area = (3 * math.sqrt(3) * (x ** 2)) / 2
+    return round(area, 1)
+
+# Examples
+print(area_of_hexagon(1))  # ➞ 2.6
+print(area_of_hexagon(2))  # ➞ 10.4
+print(area_of_hexagon(3))  # ➞ 23.4
+```
+
+**Question 5: Convert Decimal to Binary**
+```python
+def binary(decimal):
+    if decimal == 0:
+        return "0"
+    binary_str = ""
+    while decimal > 0:
+        remainder = decimal % 2
+        binary_str = str(remainder) + binary_str
+        decimal = decimal // 2
+    return binary_str
+
+# Examples
+print(binary(1))  # ➞ "1"
+print(binary(5))  # ➞ "101"
+print(binary(10))  # ➞ "1010"
+```
